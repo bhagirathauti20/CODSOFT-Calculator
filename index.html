@@ -1,36 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>CALCULATOR</title>
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>CALCULATOR</h1>
-    <div class="calculatorDisplay"></div>
-    <div class="calculatorButtons">
-        <button id="clear">AC</button>
-        <button id="back"><i class="fa-solid fa-delete-left"></i></button>
-        <button id="negation">-/+</button>
-        <button id="division">/</button>
-        <button id="seven">7</button>
-        <button id="eight">8</button>
-        <button id="nine">9</button>
-        <button id="multiplication">X</button>
-        <button id="four">4</button>
-        <button id="five">5</button>
-        <button id="six">6</button>
-        <button id="subtraction">-</button>
-        <button id="one">1</button>
-        <button id="two">2</button>
-        <button id="three">3</button>
-        <button id="addition">+</button>
-        <button id="modulus">%</button>
-        <button id="zero">0</button>
-        <button id="point">.</button>
-        <button id="result">=</button>
+
+  <header>
+    Calculator
+  </header>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <!-- <br> -->
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="deleteLast()" id="del">DEL</button>
+      <button onclick="appendChar('/')">/</button>
+      <button onclick="appendChar('*')">*</button>
     </div>
+    <div class="buttons">
+      <button onclick="appendChar('7')">7</button>
+      <button onclick="appendChar('8')">8</button>
+      <button onclick="appendChar('9')">9</button>
+      <button onclick="appendChar('-')">-</button>
+    </div>
+    <div class="buttons">
+      <!-- <br> -->
+      <button onclick="appendChar('4')">4</button>
+      <button onclick="appendChar('5')">5</button>
+      <button onclick="appendChar('6')">6</button>
+      <button onclick="appendChar('+')">+</button>
+    </div>
+    <div class="buttons">
+      <!-- <br> -->
+      <button onclick="appendChar('1')">1</button>
+      <button onclick="appendChar('2')">2</button>
+      <button onclick="appendChar('3')">3</button>
+      <button onclick="calculateResult()">=</button>
+    </div>
+    <div class="buttons lastrow">
+      <!-- <br> -->
+      <button onclick="appendChar('0')">0</button>
+      <button onclick="appendChar('.')">.</button>
+    </div>
+  </div>
+
+  <footer>Made with ❤️ by Bhagirath &#128154;</footer>
+  <script src="app.js"></script>
 </body>
 </html>
